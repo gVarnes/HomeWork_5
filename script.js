@@ -3,12 +3,12 @@ function setAsnwer() {
 	let answer;
 	let result = '';
 	// Добавляю переменую которая ведет количество итераций по циклу
-	let counter = 1;
+	let counter = 0;
 
 	while (true) {
 		//Добавляю вычисление результатом которого является каждый 3 проход по циклу
 		//если да спрашиваю "Продолжить ли?", если нет - выхожу из цикла
-		if (counter % 3 === 0) {
+		if (counter !== 0 && counter % 3 === 0) {
 			const question = confirm('Do you want to continue?');
 			if (question === false) break;
 		}
@@ -24,3 +24,4 @@ function setAsnwer() {
 }
 
 setAsnwer();
+
